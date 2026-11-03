@@ -1,0 +1,56 @@
+/* Design tokens — mirrored from the Buy Nothing Figma variables. */
+:root {
+  /* Brand */
+  --brand-ink: #214d38;
+  --brand-background: #f4efdf;
+  --brand-warm-neutral: #d8c5a4;
+  --brand-bright-accent: #d7e58b;
+  --brand-warm-accent: #d99573;
+  --brand-secondary: #5e7c45;
+
+  /* Surface & text */
+  --surface-card: #fffcf4;
+  --text-on-ink: #f4efdf;
+  --text-muted: #4a5b4f;
+  --text-disabled: #6e6656;
+  /* Not in the Figma palette — used only for form validation messages. */
+  --text-error: #a4402a;
+
+  /* Spacing */
+  --space-0-5: 4px;
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-6: 48px;
+  --space-8: 64px;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  /* Type families */
+  --font-serif: "Instrument Serif", Georgia, serif;
+  --font-sans: "Work Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --focus-ring: 0 0 0 3px var(--brand-background), 0 0 0 5px var(--brand-ink);
+}
+
+/* Text styles (Figma: Display/XL, Display/L, Headline/S, Subheading, Body, Body/Small, Label, Supporting, Label/Small) */
+.t-display-xl { font: 400 64px/64px var(--font-serif); letter-spacing: -1px; }
+.t-display-l { font: 400 48px/52px var(--font-serif); letter-spacing: -0.5px; }
+.t-headline-m { font: 400 36px/40px var(--font-serif); }
+.t-headline-s { font: 400 28px/32px var(--font-serif); }
+.t-subheading { font: 500 18px/26px var(--font-sans); }
+.t-body { font: 400 16px/24px var(--font-sans); }
+.t-body-small { font: 400 14px/20px var(--font-sans); }
+.t-label { font: 600 16px/20px var(--font-sans); }
+.t-supporting { font: 500 14px/20px var(--font-sans); }
+.t-label-small { font: 600 12px/16px var(--font-sans); letter-spacing: 0.48px; }
+
+.t-display-xl em,
+.t-display-l em,
+.t-headline-m em,
+.t-headline-s em { font-style: italic; }
