@@ -140,9 +140,11 @@
   text-align: left;
   border-radius: var(--radius-sm);
 }
-.toggle-row > span:first-child {
+.toggle-row__text {
   flex: 1 1 0;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 .toggle {
   width: 52px;
@@ -174,12 +176,16 @@
   width: 100%;
 }
 .field__control {
-  min-height: 112px;
+  width: 100%;
+  min-height: 48px;
   padding: 12px var(--space-2);
   border-radius: var(--radius-sm);
   border: 1px solid var(--brand-secondary);
   background: var(--surface-card);
   color: var(--brand-ink);
+}
+.field__control--area {
+  min-height: 112px;
   resize: vertical;
 }
 .field__control::placeholder {
@@ -190,10 +196,37 @@
   outline: none;
   box-shadow: var(--focus-ring);
 }
+.field--error .field__control {
+  border-color: var(--text-error);
+  border-width: 2px;
+  padding: 11px calc(var(--space-2) - 1px);
+}
 .field__helper {
   display: flex;
   justify-content: space-between;
   gap: var(--space-2);
+}
+.field--error .field__helper,
+.field__helper--error {
+  color: var(--text-error);
+}
+.field__select {
+  position: relative;
+}
+.field__select select {
+  appearance: none;
+  padding-right: 48px;
+  cursor: pointer;
+}
+.field__select select.is-placeholder {
+  color: var(--text-muted);
+}
+.field__chevron {
+  position: absolute;
+  right: var(--space-2);
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
 }
 
 /* ---------- Header ---------- */

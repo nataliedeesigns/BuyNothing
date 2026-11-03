@@ -22,6 +22,28 @@ export const icons = {
   send: a("icon-send.svg"),
   unreadDot: a("unread-dot.svg"),
   toggleOn: a("toggle-on.svg"),
+  // Mobile
+  bell: a("icon-bell.svg"),
+  filter: a("icon-filter.svg"),
+  x: a("icon-x.svg"),
+  chevronLeft: a("icon-chevron-left.svg"),
+  more: a("icon-more.svg"),
+  plusInk: a("icon-plus-ink.svg"),
+  messageOnInk: a("icon-message-on-ink.svg"),
+  shuffleOnInk: a("icon-shuffle-on-ink.svg"),
+  post: a("icon-post.svg"),
+};
+
+/** Bottom-nav tab icons (active variants where the design provides one). */
+export const tabIcons = {
+  home: a("tab-home.svg"),
+  homeActive: a("tab-home-active.svg"),
+  gift: a("tab-gift.svg"),
+  giftActive: a("tab-gift-active.svg"),
+  plus: a("tab-plus.svg"),
+  message: a("tab-message.svg"),
+  messageActive: a("tab-message-active.svg"),
+  user: a("tab-user.svg"),
 };
 
 export const avatars = {

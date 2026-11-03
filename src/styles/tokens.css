@@ -13,6 +13,8 @@
   --text-on-ink: #f4efdf;
   --text-muted: #4a5b4f;
   --text-disabled: #6e6656;
+  /* Not in the Figma palette — used only for form validation messages. */
+  --text-error: #a4402a;
 
   /* Spacing */
   --space-0-5: 4px;
@@ -39,6 +41,7 @@
 /* Text styles (Figma: Display/XL, Display/L, Headline/S, Subheading, Body, Body/Small, Label, Supporting, Label/Small) */
 .t-display-xl { font: 400 64px/64px var(--font-serif); letter-spacing: -1px; }
 .t-display-l { font: 400 48px/52px var(--font-serif); letter-spacing: -0.5px; }
+.t-headline-m { font: 400 36px/40px var(--font-serif); }
 .t-headline-s { font: 400 28px/32px var(--font-serif); }
 .t-subheading { font: 500 18px/26px var(--font-sans); }
 .t-body { font: 400 16px/24px var(--font-sans); }
@@ -49,4 +52,5 @@
 
 .t-display-xl em,
 .t-display-l em,
+.t-headline-m em,
 .t-headline-s em { font-style: italic; }

@@ -1,5 +1,5 @@
 import { icons } from "../assets";
-import { getItem, type Conversation } from "../data";
+import { neighbors, type Conversation } from "../data";
 import { Avatar } from "./Avatar";
 
 interface ConversationRowProps {
@@ -10,7 +10,7 @@ interface ConversationRowProps {
 
 /** Inbox row, 72px min. Unread = ink preview + outlined dot (not color-only). */
 export function ConversationRow({ conversation: c, selected, onSelect }: ConversationRowProps) {
-  const item = getItem(c.itemId);
+  const n = neighbors[c.neighborId];
   return (
     <li>
       <button
@@ -19,15 +19,15 @@ export function ConversationRow({ conversation: c, selected, onSelect }: Convers
         aria-current={selected ? "true" : undefined}
         onClick={onSelect}
       >
-        <Avatar src={c.avatar} size="m" />
+        <Avatar src={n.avatar} size="m" />
         <span className="conversation__text">
           <span className="conversation__top">
-            <span className="t-label">{c.name}</span>
+            <span className="t-label">{n.name}</span>
             <span className="t-label-small muted">{c.time}</span>
           </span>
           <span className="conversation__bottom">
             <span className={`conversation__preview t-body-small ${c.unread ? "" : "muted"}`}>
-              Re: {item?.title} — {c.preview}
+              Re: {c.itemTitle} — {c.preview}
             </span>
             {c.unread && (
               <>

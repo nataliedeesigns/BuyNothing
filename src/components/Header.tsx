@@ -23,7 +23,12 @@ export function Header() {
     if (location.pathname === "/") setQuery(params.get("q") ?? "");
   }, [location.pathname, params]);
 
-  const isBrowse = location.pathname === "/" || location.pathname.startsWith("/item/");
+  const path = location.pathname;
+  const activeFor: Record<string, boolean> = {
+    "/": path === "/" || path.startsWith("/item/"),
+    "/my-items": path.startsWith("/my-items") || path.startsWith("/giving/"),
+    "/messages": path.startsWith("/messages"),
+  };
 
   return (
     <header className="site-header">
@@ -36,7 +41,7 @@ export function Header() {
 
       <nav aria-label="Primary" className="site-nav">
         {navLinks.map((l) => {
-          const active = l.to === "/" ? isBrowse : location.pathname.startsWith(l.to);
+          const active = activeFor[l.to];
           return (
             <NavLink
               key={l.to}
@@ -63,13 +68,13 @@ export function Header() {
         onSubmit={() => navigate(query ? `/?q=${encodeURIComponent(query)}` : "/")}
       />
 
-      <Button icon={icons.plus} onClick={() => navigate("/my-items")}>
+      <Button icon={icons.plus} onClick={() => navigate("/give")}>
         Give an item
       </Button>
 
-      <button type="button" className="profile-button" aria-label="Your profile">
+      <Link to="/profile" className="profile-button" aria-label="Your profile">
         <Avatar src={avatars.me} size="m" />
-      </button>
+      </Link>
     </header>
   );
 }

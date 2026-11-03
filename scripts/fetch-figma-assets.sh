@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Downloads the image + icon assets exported from the Figma file
-# "Buy Nothing" (AFTER — 03 Desktop Screens, node 447:3871) into public/assets.
+# "Buy Nothing" (AFTER — 03 Desktop Screens, node 447:3871, and
+# AFTER — 02 Mobile Screens, node 444:3285) into public/assets.
 # The Figma MCP asset URLs are temporary (~7 days from 2026-11-03). If they have
 # expired, re-export the assets from Figma using the same file names.
 set -euo pipefail
@@ -47,5 +48,22 @@ item-books.png 5d86ab51-79d9-4bea-877a-74389526b7d5.png
 item-paperbacks.png 0e0660be-dd8e-4ef4-a51f-6ad6bb72defb.png
 item-yarn.png b378a197-984a-4752-ada1-084ea544e069.png
 item-camera.png 0be25885-fede-480b-8664-a9db1f7d9758.png
+icon-bell.svg d12394cd-d95c-4394-969c-ec0b0a73e542.svg
+icon-filter.svg d0cac1be-e244-429b-8574-bb03f163e43a.svg
+icon-x.svg 35bfa3d7-5a53-4004-ae4f-33f963dfa87f.svg
+icon-chevron-left.svg 284a17c0-75c1-489b-abf6-decec25fa4da.svg
+icon-more.svg 89669ecc-88d8-4b36-87a6-da2f96870df4.svg
+icon-plus-ink.svg 2602e2c9-f062-4b29-8274-f4e2d45cb9a1.svg
+icon-message-on-ink.svg 6c2bc1dd-25ec-454e-a224-99032ca438e2.svg
+icon-shuffle-on-ink.svg 32dd2199-29f7-404a-875c-f292202b556f.svg
+icon-post.svg 9d512728-e44a-462d-a60f-7159a592d926.svg
+tab-home.svg 7a7724a8-19c9-4d37-abb1-c69c3f6b5c27.svg
+tab-home-active.svg 65486448-da88-4fd2-ada7-2837524fb421.svg
+tab-gift.svg 02457ae1-a4e7-46f0-a4ec-e8f864be3604.svg
+tab-gift-active.svg 8b3ad99f-f9dc-4b4f-b6f4-654dd5c0cff8.svg
+tab-plus.svg 8fc88141-adb2-49a7-a9b5-26f1b2297c6e.svg
+tab-message.svg d9b90b82-7307-412f-9536-9371939b97ac.svg
+tab-message-active.svg ac6610ea-eca4-4b99-973b-6c7e8bf3d9e2.svg
+tab-user.svg b0ad7bc6-c1bb-4ee4-b89e-b9ee168c5069.svg
 LIST
 echo "Done. $(ls | wc -l) files in public/assets"
